@@ -1,37 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Styles de base */
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 * {
   box-sizing: border-box;
-}
-
-/* Classes utilitaires personnalisées */
-@layer components {
-  .agilefleet-card {
-    @apply bg-white rounded-agile shadow-agile border border-gray-200;
-  }
-
-  .agilefleet-btn-primary {
-    @apply bg-agile-primary-500 hover:bg-agile-primary-600 text-white font-semibold py-2 px-4 rounded-agile transition-colors duration-200;
-  }
-
-  .agilefleet-btn-secondary {
-    @apply bg-agile-dark-200 hover:bg-agile-dark-300 text-agile-dark-900 font-semibold py-2 px-4 rounded-agile transition-colors duration-200;
-  }
 }
