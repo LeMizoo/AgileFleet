@@ -128,7 +128,10 @@ const styles = {
     page: {
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
-        padding: '1rem 0.5rem',
+        padding: '0.75rem 0.25rem',
+        '@media (min-width: 375px)': {
+            padding: '1rem 0.5rem'
+        },
         '@media (min-width: 768px)': {
             padding: '2rem 1rem'
         }
@@ -140,17 +143,20 @@ const styles = {
     },
     hero: {
         textAlign: 'center' as const,
-        marginBottom: '2rem',
+        marginBottom: '1.5rem',
         '@media (min-width: 768px)': {
             marginBottom: '3rem'
         }
     },
     heroTitle: {
-        fontSize: '2rem',
+        fontSize: '1.5rem',
         fontWeight: 'bold',
         color: '#1f2937',
-        marginBottom: '1rem',
+        marginBottom: '0.75rem',
         lineHeight: 1.2,
+        '@media (min-width: 375px)': {
+            fontSize: '1.75rem'
+        },
         '@media (min-width: 768px)': {
             fontSize: '3rem'
         }
@@ -162,12 +168,16 @@ const styles = {
         color: '#111827'
     },
     heroSubtitle: {
-        fontSize: '1rem',
+        fontSize: '0.9rem',
         color: '#6b7280',
         maxWidth: '800px',
         margin: '0 auto',
         lineHeight: 1.5,
-        padding: '0 0.5rem',
+        padding: '0 0.25rem',
+        '@media (min-width: 375px)': {
+            fontSize: '1rem',
+            padding: '0 0.5rem'
+        },
         '@media (min-width: 768px)': {
             fontSize: '1.25rem',
             padding: 0
@@ -177,7 +187,7 @@ const styles = {
         display: 'grid',
         gridTemplateColumns: '1fr',
         gap: '1rem',
-        marginBottom: '2rem',
+        marginBottom: '1.5rem',
         '@media (min-width: 1024px)': {
             gridTemplateColumns: '1fr 1fr',
             gap: '2rem',
@@ -186,16 +196,20 @@ const styles = {
     },
     card: {
         backgroundColor: 'white',
-        borderRadius: '0.75rem',
-        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-        padding: '1.5rem',
+        borderRadius: '0.5rem',
+        boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.06)',
+        padding: '1rem',
+        '@media (min-width: 375px)': {
+            borderRadius: '0.75rem',
+            padding: '1.5rem'
+        },
         '@media (min-width: 768px)': {
             borderRadius: '1rem',
             padding: '2rem'
         }
     },
     cardTitle: {
-        fontSize: '1.25rem',
+        fontSize: '1.125rem',
         fontWeight: 'bold',
         color: '#1f2937',
         marginBottom: '1rem',
@@ -207,8 +221,8 @@ const styles = {
         }
     },
     bullet: {
-        width: '10px',
-        height: '10px',
+        width: '8px',
+        height: '8px',
         backgroundColor: '#059669',
         borderRadius: '50%',
         marginRight: '0.5rem',
@@ -226,7 +240,7 @@ const styles = {
     listItem: {
         display: 'flex',
         alignItems: 'flex-start',
-        marginBottom: '0.75rem',
+        marginBottom: '0.5rem',
         '@media (min-width: 768px)': {
             marginBottom: '1rem'
         }
@@ -234,29 +248,38 @@ const styles = {
     bulletPoint: {
         color: '#059669',
         marginRight: '0.5rem',
-        fontSize: '1rem',
+        fontSize: '0.875rem',
         lineHeight: 1.2,
         flexShrink: 0,
+        marginTop: '0.125rem',
         '@media (min-width: 768px)': {
             marginRight: '0.75rem',
-            fontSize: '1.25rem'
+            fontSize: '1rem'
         }
     },
     listText: {
         color: '#374151',
-        lineHeight: 1.5,
-        fontSize: '0.9rem',
+        lineHeight: 1.4,
+        fontSize: '0.8rem',
+        '@media (min-width: 375px)': {
+            fontSize: '0.85rem'
+        },
         '@media (min-width: 768px)': {
-            fontSize: '1rem'
+            fontSize: '1rem',
+            lineHeight: 1.5
         }
     },
     cta: {
         background: 'linear-gradient(135deg, #059669 0%, #047857 100%)',
-        borderRadius: '0.75rem',
-        boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-        padding: '1.5rem',
+        borderRadius: '0.5rem',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.05)',
+        padding: '1rem',
         textAlign: 'center' as const,
-        marginBottom: '2rem',
+        marginBottom: '1.5rem',
+        '@media (min-width: 375px)': {
+            borderRadius: '0.75rem',
+            padding: '1.5rem'
+        },
         '@media (min-width: 768px)': {
             borderRadius: '1rem',
             padding: '2rem',
@@ -264,19 +287,22 @@ const styles = {
         }
     },
     ctaTitle: {
-        fontSize: '1.25rem',
+        fontSize: '1.125rem',
         fontWeight: 'bold',
         color: 'white',
-        marginBottom: '0.75rem',
+        marginBottom: '0.5rem',
         '@media (min-width: 768px)': {
             fontSize: '1.5rem',
             marginBottom: '1rem'
         }
     },
     ctaSubtitle: {
-        fontSize: '0.9rem',
+        fontSize: '0.8rem',
         color: '#d1fae5',
-        marginBottom: '1.5rem',
+        marginBottom: '1rem',
+        '@media (min-width: 375px)': {
+            fontSize: '0.9rem'
+        },
         '@media (min-width: 768px)': {
             fontSize: '1.125rem',
             marginBottom: '2rem'
@@ -285,8 +311,11 @@ const styles = {
     ctaButtons: {
         display: 'flex',
         flexDirection: 'column' as const,
-        gap: '0.75rem',
+        gap: '0.5rem',
         justifyContent: 'center',
+        '@media (min-width: 375px)': {
+            gap: '0.75rem'
+        },
         '@media (min-width: 480px)': {
             flexDirection: 'row',
             gap: '1rem'
@@ -295,28 +324,37 @@ const styles = {
     primaryButton: {
         backgroundColor: 'white',
         color: '#059669',
-        padding: '0.75rem 1.5rem',
-        borderRadius: '0.5rem',
+        padding: '0.5rem 1rem',
+        borderRadius: '0.375rem',
         fontWeight: '600',
         textDecoration: 'none',
         transition: 'all 0.2s',
-        fontSize: '0.9rem',
+        fontSize: '0.8rem',
         textAlign: 'center' as const,
+        '@media (min-width: 375px)': {
+            padding: '0.75rem 1.5rem',
+            fontSize: '0.9rem'
+        },
         '@media (min-width: 768px)': {
             padding: '0.75rem 2rem',
             fontSize: '1rem'
         }
     },
     secondaryButton: {
-        border: '2px solid white',
+        border: '1px solid white',
         color: 'white',
         backgroundColor: 'transparent',
-        padding: '0.75rem 1.5rem',
-        borderRadius: '0.5rem',
+        padding: '0.5rem 1rem',
+        borderRadius: '0.375rem',
         fontWeight: '600',
         cursor: 'pointer',
         transition: 'all 0.2s',
-        fontSize: '0.9rem',
+        fontSize: '0.8rem',
+        '@media (min-width: 375px)': {
+            padding: '0.75rem 1.5rem',
+            fontSize: '0.9rem',
+            border: '2px solid white'
+        },
         '@media (min-width: 768px)': {
             padding: '0.75rem 2rem',
             fontSize: '1rem'
@@ -326,10 +364,10 @@ const styles = {
         textAlign: 'center' as const
     },
     modulesTitle: {
-        fontSize: '1.125rem',
+        fontSize: '1rem',
         fontWeight: '600',
         color: '#1f2937',
-        marginBottom: '1.5rem',
+        marginBottom: '1rem',
         '@media (min-width: 768px)': {
             fontSize: '1.25rem',
             marginBottom: '2rem'
@@ -337,10 +375,13 @@ const styles = {
     },
     modulesGrid: {
         display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: '0.75rem',
-        '@media (min-width: 480px)': {
+        gridTemplateColumns: '1fr',
+        gap: '0.5rem',
+        '@media (min-width: 375px)': {
             gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '0.75rem'
+        },
+        '@media (min-width: 480px)': {
             gap: '1rem'
         },
         '@media (min-width: 768px)': {
@@ -349,17 +390,22 @@ const styles = {
     },
     moduleCard: {
         color: 'white',
-        padding: '1rem 0.5rem',
-        borderRadius: '0.5rem',
+        padding: '0.75rem 0.25rem',
+        borderRadius: '0.375rem',
         textDecoration: 'none',
         fontWeight: '600',
         textAlign: 'center' as const,
         transition: 'opacity 0.2s',
-        fontSize: '0.8rem',
-        minHeight: '60px',
+        fontSize: '0.75rem',
+        minHeight: '50px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        '@media (min-width: 375px)': {
+            padding: '1rem 0.5rem',
+            fontSize: '0.8rem',
+            minHeight: '60px'
+        },
         '@media (min-width: 480px)': {
             padding: '1.5rem 1rem',
             fontSize: '0.9rem',
