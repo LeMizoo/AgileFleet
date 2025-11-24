@@ -10,9 +10,9 @@ const AgileFleetLogo: React.FC<AgileFleetLogoProps> = ({
     size = 'medium'
 }) => {
     const sizeConfig = {
-        small: { logo: 30, text: 14, gap: 6 },
-        medium: { logo: 40, text: 18, gap: 8 },
-        large: { logo: 60, text: 24, gap: 10 }
+        small: { logo: 24, text: 12, gap: 4 },
+        medium: { logo: 32, text: 14, gap: 6 },
+        large: { logo: 48, text: 18, gap: 8 }
     };
 
     const { logo: logoSize, text: textSize, gap } = sizeConfig[size];
@@ -32,6 +32,12 @@ const AgileFleetLogo: React.FC<AgileFleetLogoProps> = ({
                 style={{
                     objectFit: 'contain',
                     display: 'block'
+                }}
+                onError={(e) => {
+                    // Fallback si l'image ne charge pas
+                    console.log('Logo not found, using fallback');
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
                 }}
             />
 
