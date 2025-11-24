@@ -1,0 +1,79 @@
+/* Thème AgileFleet - Styles complémentaires */
+
+/* Classes utilitaires spécifiques AgileFleet */
+.agile-logo-text {
+    font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.agile-vehicle-shadow {
+    filter: drop-shadow(0 2px 4px rgba(44, 62, 80, 0.3));
+}
+
+.agile-glass-effect {
+    background: rgba(236, 240, 241, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* Animation du véhicule du logo */
+@keyframes agile-vehicle-drive {
+    0% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(-2px);
+    }
+}
+
+.agile-vehicle-animate {
+    animation: agile-vehicle-drive 2s ease-in-out infinite;
+}
+
+/* États interactifs avec la palette AgileFleet */
+.agile-btn-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.agile-btn-hover:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px -5px rgba(39, 174, 96, 0.3);
+}
+
+/* Gradients spécifiques */
+.agile-gradient-bg {
+    background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);
+}
+
+.agile-gradient-text {
+    background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Composants spécifiques avec la palette */
+.agile-kpi-card {
+    @apply bg-white rounded-agile-lg border border-agile-blue-200 shadow-agile;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+
+.agile-nav-item {
+    @apply text-agile-dark-600 hover:text-agile-primary-500 transition-colors duration-200 font-medium;
+}
+
+.agile-nav-item.active {
+    @apply text-agile-primary-600 font-semibold;
+}
+
+/* Responsive design avec la palette AgileFleet */
+@media (max-width: 768px) {
+    .agile-mobile-menu {
+        @apply bg-agile-blue-900 bg-opacity-95 backdrop-blur-sm;
+    }
+}

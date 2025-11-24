@@ -1,0 +1,18 @@
+<!-- public/404.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Redirecting...</title>
+    <script>
+        // Redirige vers l'application principale
+        sessionStorage.redirect = location.href;
+        window.location.href = '/';
+    </script>
+</head>
+
+<body>
+    <p>Redirection en cours...</p>
+</body>
+
+</html>

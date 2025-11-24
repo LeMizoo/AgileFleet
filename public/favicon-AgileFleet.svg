@@ -1,0 +1,10 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lettre A simplifiée -->
+  <path d="M6,26 L16,6 L26,26 Z" fill="none" stroke="#111111" stroke-width="2"/>
+  <line x1="11" y1="18" x2="21" y2="18" stroke="#111111" stroke-width="2"/>
+  
+  <!-- Véhicule vert -->
+  <rect x="12" y="14" width="8" height="4" rx="1" fill="#27AE60"/>
+  <rect x="18" y="12" width="3" height="3" rx="1" fill="#27AE60"/>
+  <rect x="19" y="13" width="1" height="1" rx="0.5" fill="#ECF0F1"/>
+</svg>
