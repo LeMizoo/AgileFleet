@@ -1,40 +1,30 @@
 import { useState, useEffect } from 'react';
-import { dashboardService } from '../services/firestoreService';
 
-export interface DashboardData {
-    totalCost: number;
-    fuelCost: number;
-    maintenanceCost: number;
-    averageCostPerVehicle: number;
-    activeVehicles: number;
+interface DashboardData {
     totalVehicles: number;
+    totalDrivers: number;
+    totalFuelCost: number;
+    totalMaintenanceCost: number;
 }
 
 export const useDashboardData = () => {
     const [data, setData] = useState<DashboardData | null>(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        loadDashboardData();
+        // Simuler le chargement de données
+        const mockData: DashboardData = {
+            totalVehicles: 10,
+            totalDrivers: 8,
+            totalFuelCost: 1500,
+            totalMaintenanceCost: 800,
+        };
+
+        setTimeout(() => {
+            setData(mockData);
+            setLoading(false);
+        }, 1000);
     }, []);
 
-    const loadDashboardData = async () => {
-        try {
-            setLoading(true);
-            const summary = await dashboardService.getSummary();
-            setData(summary);
-        } catch (err) {
-            setError(err instanceof Error ? err.message : 'Erreur lors du chargement des données');
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    return {
-        data,
-        loading,
-        error,
-        refresh: loadDashboardData
-    };
+    return { data, loading };
 };

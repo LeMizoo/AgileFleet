@@ -1,48 +1,37 @@
+// Types de base pour l'application
 export interface Vehicle {
     id: string;
-    make: string;
+    brand: string;
     model: string;
     licensePlate: string;
+    year: number;
     mileage: number;
-    status: 'active' | 'maintenance' | 'inactive';
-    assignedDriverId?: string;
-    fuelType: 'essence' | 'diesel' | 'electrique';
-    createdAt: Date;
+    status: 'active' | 'inactive' | 'maintenance';
 }
 
 export interface Driver {
     id: string;
-    name: string;
+    firstName: string;
+    lastName: string;
+    licenseNumber: string;
     email: string;
     phone: string;
-    status: 'active' | 'inactive';
-    assignedVehicleId?: string;
 }
 
 export interface FuelLog {
     id: string;
     vehicleId: string;
-    date: Date;
     liters: number;
     cost: number;
-    mileage: number;
-    fuelType: string;
+    date: string;
+    odometer: number;
 }
 
 export interface MaintenanceLog {
     id: string;
     vehicleId: string;
-    date: Date;
-    description: string;
+    type: string;
     cost: number;
-    type: 'preventive' | 'corrective';
-}
-
-export interface CostSummary {
-    totalCost: number;
-    fuelCost: number;
-    maintenanceCost: number;
-    otherCosts: number;
-    averageCostPerVehicle: number;
-    trend: 'up' | 'down' | 'stable';
+    date: string;
+    description: string;
 }
